@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#173b63">
+<title>English Paragraph Listening Corner</title>
+<style>
+:root { --navy:#173b63; --blue:#245b91; --pale:#eef5fc; --ink:#1f2937; --muted:#64748b; --line:#d9e5f2; --green:#167a58; }
+* { box-sizing:border-box; }
+body { margin:0; background:#f4f7fb; color:var(--ink); font-family:Arial, Helvetica, sans-serif; line-height:1.65; }
+header { background:linear-gradient(135deg,#173b63,#286ca2); color:white; padding:34px 18px 30px; text-align:center; }
+header .eyebrow { font-size:.78rem; letter-spacing:.14em; font-weight:700; opacity:.85; }
+header h1 { margin:8px 0; font-size:clamp(1.7rem,5vw,2.5rem); line-height:1.2; }
+header p { margin:10px auto 0; max-width:620px; color:#e6f0fb; }
+main { width:min(920px,100%); margin:0 auto; padding:22px 14px 40px; }
+.intro { text-align:center; color:var(--muted); margin:2px auto 22px; }
+.status { background:#e5f5ee; color:#155e45; border:1px solid #b8e4d1; border-radius:12px; padding:10px 14px; margin:0 0 18px; font-size:.94rem; }
+.paragraph-card { background:white; border:1px solid var(--line); border-radius:18px; padding:20px; margin:0 0 17px; box-shadow:0 4px 14px rgba(23,59,99,.045); }
+.card-top { display:flex; justify-content:space-between; gap:10px; align-items:center; flex-wrap:wrap; }
+.number { font-size:.75rem; font-weight:800; letter-spacing:.1em; color:var(--blue); }
+.tag { border-radius:99px; background:var(--pale); color:var(--blue); font-size:.75rem; font-weight:700; padding:4px 10px; }
+h2 { color:var(--navy); margin:10px 0 8px; font-size:1.35rem; }
+.paragraph-text { margin:0; font-size:1.03rem; }
+.controls { display:flex; flex-wrap:wrap; gap:9px; margin-top:18px; }
+button, select { min-height:46px; border-radius:10px; font:inherit; }
+button { padding:9px 15px; border:1px solid transparent; cursor:pointer; font-weight:700; }
+button:focus-visible, select:focus-visible { outline:3px solid #f4c95d; outline-offset:2px; }
+.play { background:var(--blue); color:white; }
+.play:hover { background:var(--navy); }
+.secondary { background:white; color:var(--navy); border-color:var(--line); }
+.secondary:hover { background:var(--pale); }
+.speed-row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px; color:var(--muted); font-size:.92rem; }
+select { padding:7px 10px; border:1px solid var(--line); background:white; color:var(--ink); }
+footer { text-align:center; color:var(--muted); font-size:.85rem; padding:0 14px 25px; }
+@media (min-width:700px) { main { padding-top:28px; } .paragraph-card { padding:24px 26px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">READ • LISTEN • PRACTISE</div>
+  <h1>English Paragraph Listening Corner</h1>
+  <p>Choose a paragraph, then tap <strong>Listen</strong> to hear it read aloud in an American English voice.</p>
+</header>
+<main>
+  <p class="intro">Five paragraphs · Easy listening controls · Works best in an up-to-date browser</p>
+  <div class="status" id="status" role="status" aria-live="polite">Ready! Choose any paragraph below to begin.</div>
+
+      <section class="paragraph-card" aria-labelledby="title-1">
+        <div class="card-top">
+          <span class="number">PARAGRAPH 01</span>
+          <span class="tag">American English</span>
+        </div>
+        <h2 id="title-1">A Day in Egypt</h2>
+        <p class="paragraph-text" id="text-1">Last week, I spent an amazing day in Egypt with my family. We visited the ancient sites. We bought souvenirs from Khan El Khalili. We enjoyed exploring new places. We took photos of the ancient sites. I love spending time in Egypt and learning about its culture.</p>
+        <div class="controls">
+          <button class="play" type="button" data-action="play" data-id="1">▶ Listen</button>
+          <button class="secondary" type="button" data-action="pause" data-id="1">Ⅱ Pause</button>
+          <button class="secondary" type="button" data-action="stop" data-id="1">■ Stop</button>
+        </div>
+        <div class="speed-row">
+          <label for="speed-1">Reading speed</label>
+          <select id="speed-1" aria-label="Reading speed for A Day in Egypt">
+            <option value="0.75">Slow</option>
+            <option value="0.9" selected>Normal</option>
+            <option value="1.05">A little faster</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="paragraph-card" aria-labelledby="title-2">
+        <div class="card-top">
+          <span class="number">PARAGRAPH 02</span>
+          <span class="tag">American English</span>
+        </div>
+        <h2 id="title-2">Ras Mohamed National Park</h2>
+        <p class="paragraph-text" id="text-2">Ras Mohamed is a special place because it has beautiful nature. It is known for its clear blue sea, colorful fish, and coral reefs. Many people visit Ras Mohamed to swim, snorkel, and dive. The park is home to turtles, dolphins, birds, and many plants. There are also mountains and trees near the beach. It is a protected area, so people must keep it clean and safe.</p>
+        <div class="controls">
+          <button class="play" type="button" data-action="play" data-id="2">▶ Listen</button>
+          <button class="secondary" type="button" data-action="pause" data-id="2">Ⅱ Pause</button>
+          <button class="secondary" type="button" data-action="stop" data-id="2">■ Stop</button>
+        </div>
+        <div class="speed-row">
+          <label for="speed-2">Reading speed</label>
+          <select id="speed-2" aria-label="Reading speed for Ras Mohamed National Park">
+            <option value="0.75">Slow</option>
+            <option value="0.9" selected>Normal</option>
+            <option value="1.05">A little faster</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="paragraph-card" aria-labelledby="title-3">
+        <div class="card-top">
+          <span class="number">PARAGRAPH 03</span>
+          <span class="tag">American English</span>
+        </div>
+        <h2 id="title-3">Life in the Village</h2>
+        <p class="paragraph-text" id="text-3">Life in the village is simple but busy. Many people work hard to support their families. Some go fishing early in the morning. Others work in fish factories or fix boats. In some places, people grow fruits and vegetables. They water the plants, harvest the crops, and feed the animals. On Fridays, they go to the market to sell food. In desert areas, people make carpets and rugs. They spin and dye wool using natural colors. Every day, people help each other and enjoy the quiet life in the village.</p>
+        <div class="controls">
+          <button class="play" type="button" data-action="play" data-id="3">▶ Listen</button>
+          <button class="secondary" type="button" data-action="pause" data-id="3">Ⅱ Pause</button>
+          <button class="secondary" type="button" data-action="stop" data-id="3">■ Stop</button>
+        </div>
+        <div class="speed-row">
+          <label for="speed-3">Reading speed</label>
+          <select id="speed-3" aria-label="Reading speed for Life in the Village">
+            <option value="0.75">Slow</option>
+            <option value="0.9" selected>Normal</option>
+            <option value="1.05">A little faster</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="paragraph-card" aria-labelledby="title-4">
+        <div class="card-top">
+          <span class="number">PARAGRAPH 04</span>
+          <span class="tag">American English</span>
+        </div>
+        <h2 id="title-4">A Day at Your School</h2>
+        <p class="paragraph-text" id="text-4">My school day starts early. I wake up around 6:30 a.m., get dressed, and eat a quick breakfast. Then I go to school. The school day begins at 7:30 a.m. We stand in line, salute the flag, and sing the national anthem. After that, we go to our classrooms and start our lessons. The first subject is usually Arabic. My favorite subject is P.E. The school day ends at 1:30 p.m. I feel a bit tired, but I'm happy. I go home, eat lunch, rest a little, and then do my homework.</p>
+        <div class="controls">
+          <button class="play" type="button" data-action="play" data-id="4">▶ Listen</button>
+          <button class="secondary" type="button" data-action="pause" data-id="4">Ⅱ Pause</button>
+          <button class="secondary" type="button" data-action="stop" data-id="4">■ Stop</button>
+        </div>
+        <div class="speed-row">
+          <label for="speed-4">Reading speed</label>
+          <select id="speed-4" aria-label="Reading speed for A Day at Your School">
+            <option value="0.75">Slow</option>
+            <option value="0.9" selected>Normal</option>
+            <option value="1.05">A little faster</option>
+          </select>
+        </div>
+      </section>
+
+      <section class="paragraph-card" aria-labelledby="title-5">
+        <div class="card-top">
+          <span class="number">PARAGRAPH 05</span>
+          <span class="tag">American English</span>
+        </div>
+        <h2 id="title-5">Khan El Khalili</h2>
+        <p class="paragraph-text" id="text-5">Yesterday, I visited Khan El Khalili with my family. We bought souvenirs from the market. We took many photos. We saw many tourists there. We enjoyed our day at Khan El Khalili.</p>
+        <div class="controls">
+          <button class="play" type="button" data-action="play" data-id="5">▶ Listen</button>
+          <button class="secondary" type="button" data-action="pause" data-id="5">Ⅱ Pause</button>
+          <button class="secondary" type="button" data-action="stop" data-id="5">■ Stop</button>
+        </div>
+        <div class="speed-row">
+          <label for="speed-5">Reading speed</label>
+          <select id="speed-5" aria-label="Reading speed for Khan El Khalili">
+            <option value="0.75">Slow</option>
+            <option value="0.9" selected>Normal</option>
+            <option value="1.05">A little faster</option>
+          </select>
+        </div>
+      </section>
+</main>
+<footer>Tip for students: listen once, then read the paragraph aloud yourself.</footer>
+<script>
+(function () {
+  const status = document.getElementById('status');
+  let currentUtterance = null;
+  let currentId = null;
+
+  function getAmericanVoice() {
+    if (!('speechSynthesis' in window)) return null;
+    const voices = window.speechSynthesis.getVoices();
+    return voices.find(v => /^en-US$/i.test(v.lang)) ||
+           voices.find(v => /^en_US$/i.test(v.lang)) ||
+           voices.find(v => /^en(-|_)/i.test(v.lang)) || null;
+  }
+
+  function stopReading() {
+    if ('speechSynthesis' in window) window.speechSynthesis.cancel();
+    currentUtterance = null;
+    currentId = null;
+  }
+
+  document.querySelectorAll('button[data-action]').forEach(button => {
+    button.addEventListener('click', () => {
+      const action = button.dataset.action;
+      const id = button.dataset.id;
+
+      if (!('speechSynthesis' in window) || !('SpeechSynthesisUtterance' in window)) {
+        status.textContent = 'Audio reading is not supported in this browser. Please try Chrome or another modern browser.';
+        return;
+      }
+
+      if (action === 'pause') {
+        if (window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
+          window.speechSynthesis.pause();
+          status.textContent = 'Reading paused.';
+        } else {
+          status.textContent = 'Nothing is currently playing. Choose Listen on a paragraph.';
+        }
+        return;
+      }
+
+      if (action === 'stop') {
+        stopReading();
+        status.textContent = 'Reading stopped. Choose another paragraph whenever you are ready.';
+        return;
+      }
+
+      stopReading();
+      const text = document.getElementById('text-' + id).textContent.trim();
+      const utterance = new SpeechSynthesisUtterance(text);
+      const voice = getAmericanVoice();
+      if (voice) utterance.voice = voice;
+      utterance.lang = 'en-US';
+      utterance.rate = Number(document.getElementById('speed-' + id).value);
+      utterance.pitch = 1;
+      currentUtterance = utterance;
+      currentId = id;
+      utterance.onstart = () => {
+        status.textContent = 'Now reading: ' + document.getElementById('title-' + id).textContent;
+      };
+      utterance.onend = () => {
+        if (currentId === id) {
+          status.textContent = 'Finished! Choose another paragraph to listen again.';
+          currentUtterance = null;
+          currentId = null;
+        }
+      };
+      utterance.onerror = event => {
+        status.textContent = event.error === 'canceled' ? 'Reading stopped.' : 'The browser could not play the voice. Please try again.';
+      };
+      window.speechSynthesis.speak(utterance);
+    });
+  });
+
+  if ('speechSynthesis' in window) {
+    window.speechSynthesis.onvoiceschanged = () => window.speechSynthesis.getVoices();
+  }
+})();
+</script>
+</body>
+</html>
